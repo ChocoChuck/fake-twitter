@@ -1,0 +1,13 @@
+<h1>All Tweets</h1>
+
+<p>Number of tweets: <%= number_with_delimiter(@tweets.count) %><p>
+
+<ul>
+  <% @tweets.each do |tweet| %>
+    <li>
+      <%= link_to(tweet.title, tweet) %>
+      <%= edit_tweet_link(tweet) %>
+      <%= delete_tweet_link(tweet) %>
+    </li>
+  <% end %>
+</ul>

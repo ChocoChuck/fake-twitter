@@ -1,0 +1,9 @@
+<div class="tweet">
+  <h2><%= tweet.title %></h2>
+  <p><%= tweet.body %></p>
+  <% if tweet.photo.present? %>
+    <p><%= image_tag(tweet.photo.url(:thumb)) %></p>
+  <% end %>
+  <p><%= edit_tweet_link(tweet) %></p>
+  <p><%= delete_tweet_link(tweet) %></p>
+</div>
